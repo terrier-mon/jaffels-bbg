@@ -24,13 +24,9 @@ clean-targets:
 vars:
   "dbt_date:time_zone": "America/Los_Angeles"
 
-seeds:
-  jaffle_shop:
-    +schema: raw
-
 models:
   jaffle_shop:
     staging:
-      +materialized: view
+      +materialized: table
     marts:
       +materialized: table
